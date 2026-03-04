@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的专属座右铭生成器</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        #generateBtn {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #loadingTip {
+            display: none;
+            margin-top: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+        #loadingTip span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #007bff;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .motto-result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #dc3545;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✨ 专属座右铭生成器 ✨</h2>
+        <input type="text" id="username" placeholder="输入你的名字（比如：小明）">
+        <br>
+        <button id="generateBtn">生成我的座右铭</button>
+        <div id="loadingTip">
+            <span></span>处理中，请稍候...
+        </div>
+        <div id="result" class="motto-result"></div>
+    </div>
+
+    <script>
+        // 座右铭模板
+        const mottoTemplates = [
+            "{name}，坚持就是胜利！",
+            "{name}，每天进步一点点～",
+            "{name}，越努力越幸运！",
+            "{name}，做自己的光✨！",
+            "{name}，不忘初心，方得始终！"
+        ];
+
+        // 获取元素
+        const usernameInput = document.getElementById('username');
+        const generateBtn = document.getElementById('generateBtn');
+        const loadingTip = document.getElementById('loadingTip');
+        const resultDiv = document.getElementById('result');
+
+        // 点击生成按钮
+        generateBtn.addEventListener('click', function() {
+            const username = usernameInput.value.trim();
+            if (!username) {
+                resultDiv.textContent = "错误：请输入你的名字！";
+                return;
+            }
+
+            // 显示加载提示
+            generateBtn.style.display = 'none';
+            loadingTip.style.display = 'inline-block';
+            resultDiv.textContent = "";
+
+            // 模拟1秒处理时间
+            setTimeout(() => {
+                // 随机选模板
+                const randomTemplate = mottoTemplates[Math.floor(Math.random() * mottoTemplates.length)];
+                // 生成座右铭
+                const motto = randomTemplate.replace("{name}", username);
+                // 显示结果
+                resultDiv.textContent = motto;
+                // 恢复按钮，隐藏加载
+                generateBtn.style.display = 'inline-block';
+                loadingTip.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
