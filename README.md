@@ -1,2 +1,1 @@
-# motto-generator
-我的座右铭生成器
+<meta http-equiv="refresh" content="0; URL=./index.html">
