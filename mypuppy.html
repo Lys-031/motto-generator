@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪糕的小世界 | 西高地白梗</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+        body {
+            background-color: #fdf8f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 头部 */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #fff;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        /* 关于我 */
+        .about {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .about h2 {
+            color: #e67e22;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .about-content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .about-img {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        .about-img img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 50%;
+            border: 4px solid #fdebd0;
+        }
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+        .about-text ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .about-text li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .about-text li::before {
+            content: "🐾";
+            position: absolute;
+            left: 0;
+            color: #e67e22;
+        }
+        /* 我的日常 */
+        .daily {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .daily h2 {
+            color: #e67e22;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .daily-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .daily-card {
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #fdf8f4;
+            transition: transform 0.3s ease;
+        }
+        .daily-card:hover {
+            transform: translateY(-5px);
+        }
+        .daily-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            color: #e67e22;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        .card-content p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        /* 联系我们 */
+        .contact {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .contact h2 {
+            color: #e67e22;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .contact p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-links a {
+            color: #e67e22;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #d35400;
+        }
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #999;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header>
+            <h1>🐾 雪糕的小世界</h1>
+            <p>一只可爱的西高地白梗，用毛茸茸治愈全世界</p>
+        </header>
+
+        <!-- 关于我 -->
+        <section class="about">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <!-- 替换成雪糕的照片链接 -->
+                    <img src="https://via.placeholder.com/250" alt="雪糕的照片">
+                </div>
+                <div class="about-text">
+                    <h3>大家好，我是雪糕🍦</h3>
+                    <p>我是一只快乐的西高地白梗，每天的任务就是吃好吃的、玩玩具、和主人贴贴～</p>
+                    <ul>
+                        <li>品种：西高地白梗</li>
+                        <li>生日：2023年5月20日</li>
+                        <li>性格：活泼开朗，有点小傲娇</li>
+                        <li>爱好：啃骨头、追蝴蝶、睡懒觉</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 我的日常 -->
+        <section class="daily">
+            <h2>我的日常</h2>
+            <div class="daily-grid">
+                <div class="daily-card">
+                    <!-- 替换成雪糕的照片链接 -->
+                    <img src="https://via.placeholder.com/400x200?text=早餐时间" alt="早餐时间">
+                    <div class="card-content">
+                        <h3>🍖 早餐时间</h3>
+                        <p>每天最期待的就是早餐！鸡胸肉+狗粮，香到舔盘子～</p>
+                    </div>
+                </div>
+                <div class="daily-card">
+                    <!-- 替换成雪糕的照片链接 -->
+                    <img src="https://via.placeholder.com/400x200?text=公园散步" alt="公园散步">
+                    <div class="card-content">
+                        <h3>🌳 公园散步</h3>
+                        <p>最喜欢去公园追蝴蝶，跑累了就趴在草地上晒太阳～</p>
+                    </div>
+                </div>
+                <div class="daily-card">
+                    <!-- 替换成雪糕的照片链接 -->
+                    <img src="https://via.placeholder.com/400x200?text=玩具时间" alt="玩具时间">
+                    <div class="card-content">
+                        <h3>🧸 玩具时间</h3>
+                        <p>我的玩具堆成山，但最爱的还是那只破破的小鸭子～</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我们 -->
+        <section class="contact">
+            <h2>联系我们</h2>
+            <p>想和雪糕交朋友？快来关注我们的社交账号吧～</p>
+            <div class="social-links">
+                <a href="#" title="小红书">📕</a>
+                <a href="#" title="微博">🐦</a>
+                <a href="#" title="抖音">🎵</a>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>&copy; 2024 雪糕的小世界 | 用爱和毛茸茸治愈每一天</p>
+        </footer>
+    </div>
+</body>
+</html>
